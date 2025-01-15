@@ -17,7 +17,7 @@ class StochasticPushForward:
         Initialize the class with model components and hyperparameters.
 
         Args:
-            cae: Autoencoder model containing an encoder and decoder.
+            cae: Autoencoder model containing an encoder and decoder. Default trained.
             model: Predictive model for the latent space.
             lookback (int): Number of timesteps for input sequences.
             lookahead (int): Number of timesteps to predict.
@@ -33,7 +33,7 @@ class StochasticPushForward:
 
     def load_data(self, path: str, batch_size: int):
         """
-        Load training data and initialize DataLoader.
+        Load training data and initialize DataLoader. Default: Compressed data.
 
         Args:
             path (str): Path to the dataset file.
@@ -50,7 +50,7 @@ class StochasticPushForward:
 
     def load_test_data(self, path: str):
         """
-        Load test dataset.
+        Load test dataset. Default: Compressed data.
 
         Args:
             path (str): Path to the test dataset file.
